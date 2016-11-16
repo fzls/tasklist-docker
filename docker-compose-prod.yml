@@ -35,7 +35,7 @@ services:
     # the workers
     php:
         # build php based on this image, with add of laravel needed extention like php_pdo and etc.
-        image: fzls/php:v1
+        image: fzls/php:latest
         volumes:
             - .:/code
         working_dir: /code

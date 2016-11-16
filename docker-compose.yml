@@ -41,7 +41,7 @@ services:
                 - INSTALL_XDEBUG=true
                 - INSTALL_OPCACHE=true
                 - INSTALL_MEMCACHED=false
-        image: meow/php:7-fpm
+        image: fzls/php:dev
         volumes:
             - .:/code
         working_dir: /code
