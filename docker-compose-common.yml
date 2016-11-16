@@ -81,10 +81,15 @@ services:
         image: tianon/true
         volumes:
             - .:/code
+        networks:
+            - front_tier
+            - back_tier
     volumes_data:
         image: tianon/true
         volumes:
             - ./data/db:/var/lib/mysql
+        networks:
+            - back_tier
 networks:
     front_tier:
         driver: bridge
