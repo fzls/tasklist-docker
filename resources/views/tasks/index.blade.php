@@ -73,6 +73,9 @@
                     </div>
                 </div>
             @endif
+            <div class="panel panel-primary">
+                This host is <h3>{{gethostname()}}</h3>
+            </div>
         </div>
     </div>
 @endsection
