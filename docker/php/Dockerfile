@@ -27,6 +27,7 @@ RUN docker-php-ext-configure gd \
         --with-jpeg-dir=/usr/lib \
         --with-freetype-dir=/usr/include/freetype2 && \
     docker-php-ext-install gd
+RUN    docker-php-ext-install zip # useful for composer
 
 # install composer
 ##RUN curl --tlsv1 --http1.0 -o /usr/local/bin/composer \
