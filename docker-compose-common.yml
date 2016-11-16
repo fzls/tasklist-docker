@@ -1,4 +1,10 @@
 # common settings for dev and pro version
+# TODO: add deploy script :
+#                           1. get latest code and cd to it
+#                           2. docker-compose build
+#                           3. tag newly built images
+#                           4. push to docker hub
+#                           5. docker-compose -f..common. -f ..prod up -d
 version: '2'
 services:
     # receive http connection from client
@@ -45,7 +51,7 @@ services:
         # 3. TODO: add scheduler
         # 4. change file permissions
         # 5. run php-fpm
-        command: bash -c "composer install && php artisan migrate && chmod -R 775 storage bootstrap/cache && php-fpm"
+        command: bash -c "composer install && php artisan migrate && chmod -R 777 storage bootstrap/cache && php-fpm"
         #environment:
         #    - TCP_PORTS=9000
         #    - VIRTUAL_HOST=oauth.*.*/*
